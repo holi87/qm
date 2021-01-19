@@ -23,6 +23,7 @@ public class FirstTest extends BaseTest {
         main
                 .goToQualityMindsDePage()
                 .acceptCookies()
+                .checkIfQualityMindsPageIsDisplayed()
                 .clickKontaktOnTop();
         kontakt
                 .pageIsDisplayed()

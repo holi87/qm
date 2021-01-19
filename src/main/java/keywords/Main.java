@@ -58,4 +58,14 @@ public class Main extends Common {
         log.info("kontakt on bottom is clicked");
         return this;
     }
+
+    /**
+     * checks if on home page by checking H1
+     *
+     * @return Main for fluent writting
+     */
+    public Main checkIfQualityMindsPageIsDisplayed() {
+        textToBePresentInElement(By.tagName("h1"), "Wir geben Qualität ein Gesicht");
+        return this;
+    }
 }

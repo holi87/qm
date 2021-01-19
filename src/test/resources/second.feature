@@ -3,7 +3,11 @@ Feature: Quality Minds Recrutation
   Second testcase done with Gherkin
 
   Scenario: Second Test Case
-    Given qualtiyminds.de home page
+    Given Webdriver setup
+
+    When qualtiyminds.de home page
+    Then qualityminds.de home page is displayed
+
     When Hover on Portfolio at the top of navigation
     Then Verify if submenu is displayed
 
