@@ -19,9 +19,8 @@ public class BaseTest {
     @BeforeEach
     public void setup() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--lang=pl");
         options.addArguments("window-size=1366,768");
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(cfg.getPageloadTime(), TimeUnit.SECONDS);
     }
