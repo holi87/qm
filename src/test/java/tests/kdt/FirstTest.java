@@ -1,7 +1,7 @@
-package tests;
+package tests.kdt;
 
-import keywords.Kontakt;
-import keywords.Main;
+import keywords.front.Kontakt;
+import keywords.front.Main;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package tests;
+package tests.kdt;
 
 import config.ConfigurationReader;
 import org.junit.jupiter.api.BeforeEach;
