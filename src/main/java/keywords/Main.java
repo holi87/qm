@@ -32,9 +32,9 @@ public class Main extends Common {
     }
 
     public Main clickKontaktAndAnfahrtOnBottom() {
-        WebElement menuBottom = visibilityOfElementLocated(By.cssSelector(".menu-footer-menu"));
+        WebElement menuBottom = presenceOfElementLocated(By.cssSelector("#menu-footer-menu"));
         scrollToWebElement(menuBottom);
-        menuBottom.findElement(By.linkText("Kontakt & Anfahrt"));
+        waitAndClick(menuBottom.findElement(By.xpath("//a[contains(text(),'Kontakt & Anfahrt')]")));
         log.info("kontakt on bottom is clicked");
         return this;
     }

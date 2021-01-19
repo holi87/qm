@@ -5,8 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class Common extends Wrappers {
     protected final static String QUALITY_MINDS_DE_URL = "https://qualityminds.de/";
 
@@ -24,6 +22,10 @@ public class Common extends Wrappers {
         isClickable(by).click();
     }
 
+    protected void waitAndClick(WebElement webElement) {
+        isClickable(webElement).click();
+    }
+
     /**
      * used only for visual check on page in debuging mode
      */
@@ -37,11 +39,11 @@ public class Common extends Wrappers {
      * @param url expected url as a String
      */
     public void urlShouldBe(String url) {
-        assertEquals(url, driver.getCurrentUrl(), "url is not expected");
+        urlToBe(url);
     }
 
     protected void scrollToWebElement(WebElement webElement) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", webElement);
+        js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
 }

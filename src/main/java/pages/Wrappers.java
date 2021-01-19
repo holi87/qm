@@ -52,6 +52,17 @@ public class Wrappers {
     }
 
     /**
+     * Wait until element is presence, then wait until same element is clickable.
+     *
+     * @param webElement uses WebElement to check
+     * @return WebElement which is presence and clickable
+     */
+    protected WebElement isClickable(WebElement webElement) {
+        webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement));
+    }
+
+    /**
      * checking actual URL with expected one
      *
      * @param expectedUrl expected url
@@ -96,5 +107,14 @@ public class Wrappers {
         return new Actions(driver);
     }
 
+    /**
+     * Checking that element is in DOM
+     *
+     * @param by By object
+     * @return WebElement
+     */
+    protected WebElement presenceOfElementLocated(By by) {
+        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
 
 }
