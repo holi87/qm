@@ -22,15 +22,13 @@ public class Common extends Wrappers {
         isClickable(by).click();
     }
 
+    /**
+     * wait until element is clickable, then making click on it.
+     *
+     * @param webElement uses WebElement object to define element for click on
+     */
     protected void waitAndClick(WebElement webElement) {
         isClickable(webElement).click();
-    }
-
-    /**
-     * used only for visual check on page in debuging mode
-     */
-    public void stopper() {
-        alertIsPresent();
     }
 
     /**
@@ -42,6 +40,11 @@ public class Common extends Wrappers {
         urlToBe(url);
     }
 
+    /**
+     * method using JS executor for scrolling to webelement
+     *
+     * @param webElement which is target for scrolling
+     */
     protected void scrollToWebElement(WebElement webElement) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
