@@ -87,6 +87,11 @@ public class SecondTCStepDefs {
 
     @Then("File is available via download link")
     public void fileIsAvailableViaDownloadLink() {
+        /*
+        tego kawalka nie napisalem, nigdy nie sprawdzalem sciagniecia pliku, zakladam ze trzeba by bylo wbic sie w warstwe systemowa
+        ustawic w chrome options jakis staly folder tempowy i sprawdzac ilosc sciagnietych plikow, jak liczba zwiekszyla sie o 1
+        to uznajemy ze jest ok
+         */
     }
 
     @Given("Webdriver setup")
