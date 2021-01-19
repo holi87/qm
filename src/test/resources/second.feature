@@ -15,10 +15,10 @@ Feature: Quality Minds Recrutation
     Then Web, Automation & Mobile Testing page is displayed
     Then Portfolio item on the top bar menu is highlighted
 
-    When Click on Mobile tab in "Web-Automatiserung - Mobile" section
+    When Click on Mobile tab in Web-Automatiserung - Mobile section
     Then Mobile section content is displayed
     Then Mobile is underlined in grey
-    Then "Flyer find the bug session" button is displayed on the right
+    Then Flyer find the bug session button is displayed on the right
 
     Then The download link for the flyer should be equal to set url
     Then File is available via download link

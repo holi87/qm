@@ -49,4 +49,12 @@ public class Common extends Wrappers {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
+
+    public void hoverOnElementBy(By by) {
+        getActions().moveToElement(visibilityOfElementLocated(by)).build().perform();
+    }
+
+    public void moveToElementAndClickIt(By by) {
+        getActions().moveToElement(visibilityOfElementLocated(by)).click().build().perform();
+    }
 }

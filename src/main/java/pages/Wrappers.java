@@ -35,7 +35,7 @@ public class Wrappers {
      * @param text       text to be checked in WebElement
      * @return true if text is in element
      */
-    protected Boolean textToBePresentInElement(WebElement webElement, String text) {
+    public Boolean textToBePresentInElement(WebElement webElement, String text) {
         return webDriverWait.until(ExpectedConditions.textToBePresentInElement(webElement, text));
     }
 
@@ -94,7 +94,7 @@ public class Wrappers {
      * @param by By object
      * @return webelement with isDisplayed == true
      */
-    protected WebElement visibilityOfElementLocated(By by) {
+    public WebElement visibilityOfElementLocated(By by) {
         return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 

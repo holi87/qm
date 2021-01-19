@@ -65,7 +65,7 @@ public class Main extends Common {
      * @return Main for fluent writting
      */
     public Main checkIfQualityMindsPageIsDisplayed() {
-        textToBePresentInElement(By.tagName("h1"), "Wir geben Qualität ein Gesicht");
+        textToBePresentInElement(visibilityOfElementLocated(By.tagName("h1")), "Wir geben Qualität ein Gesicht");
         return this;
     }
 }
